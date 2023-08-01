@@ -1,17 +1,19 @@
 import * as React from 'react';
-import { TodoContextType, ITodo } from '../@types/Todo';
-import { TodoContext } from '../Context/TodoContext';
 import Todo from '../components/Todo/Todo';
+import { useTodoOperations } from '../Hooks/useTodoOperations';
 
 const Todos = () => {
-  const { todos, updateTodo, deleteTodo } = React.useContext(TodoContext) as TodoContextType;
+  const { todos, updateTodo, deleteTodo } = useTodoOperations();
+
   return (
     <>
-    {
-        todos.length ?  todos.map((todo: ITodo) => (
-            <Todo key={todo.id} updateTodo={updateTodo} deleteTodo={deleteTodo} todo={todo} />
-          )) : <p className='fw-bold'>No Tasks to show. Please add your tasks.</p>
-    }
+      {todos.length ? (
+        todos.map((todo) => (
+          <Todo key={todo.id} todo={todo} updateTodo={updateTodo} deleteTodo={deleteTodo} />
+        ))
+      ) : (
+        <p className='fw-bold'>No Tasks to show. Please add your tasks.</p>
+      )}
     </>
   );
 };
