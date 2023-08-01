@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,300;0,400;1,300;1,400&display=swap');
+
+$background-color-dark: #d3d1cd;
+$primary-color: #6D3DDA;
+$text-color: #464544;
+$text-color-white: #ffff;
+$icon-color: #92918e;
+$background-color-light: #f1f0ed;
+$text-color-light: #8b8b8a;
+
+@mixin base-button{
+    border-radius: 30px;
+    color: $text-color-white;
+}
+
+body{
+    font-family: 'Josefin Sans', sans-serif;
+    background-color: $background-color-dark;
+    width: 100%;
+}
+.Card{
+    .Card--text{
+        background-color: $background-color-light;
+        .task {
+            display: flex;
+            flex-direction: column;
+            p,h2{
+                width: 850px;
+            }
+        }
+        .task h2,
+        .task p {
+            margin: 0;
+            padding: 0;
+        }
+    }
+    .hide-button{
+        @include base-button;
+        background-color: $icon-color;
+    }
+    .Card--button{
+        @include base-button;
+        background-color: $primary-color;
+    }
+}
+.Form{
+    .add-button{
+        @include base-button;
+        background-color: $primary-color;
+        padding: 15px;
+        font-size: large;
+        font-weight: bold;
+    }
+    label{
+        font-size: large;
+        font-weight: bold;
+    }
+    textarea{
+        width: 300px;
+    }
+}
+.Title{
+    font-family: 'Josefin Sans', sans-serif;
+}
+.Add-container{
+    background-color: $background-color-light;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+}
