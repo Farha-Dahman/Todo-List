@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "../node_modules/bootstrap/dist/js/bootstrap.bundle.js";
 import "./index.css";
-import "../src/Style/Style.scss";
+import "../src/assets/style/style.scss";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
