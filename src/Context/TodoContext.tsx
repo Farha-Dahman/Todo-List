@@ -8,7 +8,7 @@ const TodoProvider: React.FC<React.PropsWithChildren<{}>> = ({ children }) => {
 
   const saveTodo = (todo: ITodo) => {
     const newTodo: ITodo = {
-      id: Math.random(), 
+      id: Math.random(),
       title: todo.title,
       description: todo.description,
       status: false,
@@ -30,7 +30,7 @@ const TodoProvider: React.FC<React.PropsWithChildren<{}>> = ({ children }) => {
   };
 
   return (
-    <TodoContext.Provider value={{ todos, saveTodo, updateTodo , deleteTodo }}>
+    <TodoContext.Provider value={{ todos, saveTodo, updateTodo, deleteTodo }}>
       {children}
     </TodoContext.Provider>
   );

@@ -1,30 +1,30 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,300;0,400;1,300;1,400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,300;0,400;1,300;1,400&display=swap");
 
-$background-color-dark: #d3d1cd;
-$primary-color: #6D3DDA;
+$background-color-dark: #3b3a3b;
+$primary-color: #6d3dda;
 $text-color: #464544;
 $text-color-white: #ffff;
 $icon-color: #92918e;
 $background-color-light: #f1f0ed;
 $text-color-light: #8b8b8a;
 
-@mixin base-button{
+@mixin base-button {
     border-radius: 30px;
     color: $text-color-white;
 }
 
-body{
-    font-family: 'Josefin Sans', sans-serif;
+body {
+    font-family: "Josefin Sans", sans-serif;
     background-color: $background-color-dark;
-    width: 100%;
 }
-.Card{
-    .Card--text{
+.Card {
+    .card-text {
         background-color: $background-color-light;
         .task {
             display: flex;
             flex-direction: column;
-            p,h2{
+            p,
+            h2 {
                 width: 850px;
             }
         }
@@ -34,36 +34,63 @@ body{
             padding: 0;
         }
     }
-    .hide-button{
+    .hide-button {
         @include base-button;
         background-color: $icon-color;
     }
-    .Card--button{
+    .card-button {
         @include base-button;
         background-color: $primary-color;
     }
 }
-.Form{
-    .add-button{
+.Form {
+    .add-button {
         @include base-button;
         background-color: $primary-color;
         padding: 15px;
         font-size: large;
         font-weight: bold;
     }
-    label{
+    label {
         font-size: large;
         font-weight: bold;
     }
-    textarea{
-        width: 300px;
-    }
 }
-.Title{
-    font-family: 'Josefin Sans', sans-serif;
+.title {
+    font-family: "Josefin Sans", sans-serif;
+    letter-spacing: 1cm;
+    color: $text-color-white;
 }
-.Add-container{
+
+.Add-container {
     background-color: $background-color-light;
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
+    textarea {
+        width: 350px;
+    }
+    input {
+        height: 35px;
+    }
+}
+
+@media (max-width: 768px) {
+    .card-text,
+    .non-flex,
+    .media-inputs {
+        flex-direction: column !important;
+    }
+    .media-xsm {
+        width: 100%;
+    }
+}
+
+@media (max-width: 980px) {
+    .media-form {
+        flex-direction: column !important;
+    }
+    .add-button {
+        margin-top: 47px;
+        width: 180px;
+    }
 }

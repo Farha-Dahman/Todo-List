@@ -7,7 +7,7 @@ export default function App() {
   return (
     <TodoProvider>
       <main className='text-center m-3'>
-        <h1 className='Title'>My Todos</h1>
+        <h1 className='title'>TODO</h1>
         <AddTodo />
         <Todos />
       </main>

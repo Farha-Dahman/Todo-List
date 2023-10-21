@@ -12,7 +12,7 @@ const Todos = () => {
           <Todo key={todo.id} todo={todo} updateTodo={updateTodo} deleteTodo={deleteTodo} />
         ))
       ) : (
-        <p className='fw-bold'>No Tasks to show. Please add your tasks.</p>
+        <p className='fw-bold text-light'>No Tasks to show. Please add your tasks.</p>
       )}
     </>
   );
